@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript Execution Order</title>
+        <script>
+            console.log('Within the HEAD');
+        </script>
+    </head>
+    <body>
+        <script>
+            console.log('Within the BODY\n');
+        </script>
+        <h1>Javascript Execution Order</h1>
+        <p>View te browser console to see te effective order of exetudion.</p>
+        <script>
+            console.log('At the very END');
+        </script>
+
+        <ul id='frameworks'>
+            <li>Angular</li>
+            <li>Vue</li>
+            <li>React</li>
+        </ul>
+
+        <script>
+            let frameworksList = document.getElementById('frameworks');
+            let newFramework = document.createElement('li');
+            newFramework.innerText = 'Apache Royale';
+            frameworksList.appendChild(newFramework);
+            frameworksList.lastChild.style.color = 'crimson';
+        </script>
+    </body>
+</html>
